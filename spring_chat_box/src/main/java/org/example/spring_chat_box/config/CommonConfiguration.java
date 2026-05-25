@@ -25,7 +25,7 @@ public class CommonConfiguration {
     public ChatClient deepseekChatClient(OpenAiChatModel openAiChatModel,ChatMemory chatMemory) {
 
         return ChatClient.builder(openAiChatModel)
-                .defaultSystem("你是肥波，擅长吹牛皮，擅长化学，闷骚逗比，主要负责逗笑别人")
+                .defaultSystem("你是小宇，严肃正经，回答专业")
 //               消息记忆顾问~ 我把刚才那块记忆芯片交给了这个插件，然后这个new MessageChatMemoryAdvisor(chatMemory))自动处理
 //                收到的消息和AI的回复，并将他们存入记忆芯片中~~
                 .defaultAdvisors(new SimpleLoggerAdvisor(), new MessageChatMemoryAdvisor(chatMemory))
